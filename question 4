@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>question 4</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .topbar {
+        font-size: 1.2rem;
+        background-color: black;
+        height: 40px;
+        text-align: center;
+        color: white;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        font-size: 1.2rem;
+      }
+      .menu ul {
+        display: flex;
+        width: 300px;
+        justify-content: space-around;
+      }
+      li {
+        list-style: none;
+      }
+      .loginInfo {
+        display: flex;
+        width: 200px;
+      }
+      .loginInfo button {
+        margin-left: 1rem;
+        padding: 0.8rem;
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: white;
+      }
+      .loginInfo :nth-child(2) button {
+        background-color: yellow;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .leftContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .leftContent p,
+      .leftContent h1 {
+        margin-top: 0.6rem;
+        width: 500px;
+      }
+      .leftContent :nth-child(1) {
+        font-size: 1rem;
+      }
+      .leftContent :nth-child(3) {
+        font-size: 1.1rem;
+      }
+      .leftContent button {
+        background-color: yellow;
+        padding: 1rem;
+        border-radius: 30px;
+        margin-left: -25rem;
+        margin-top: 1.5rem;
+      }
+      footer {
+        margin-top: -0.24rem;
+        background-color: black;
+        height: 100px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+      }
+      .setting button {
+        background-color: transparent;
+        color: white;
+        width: 10rem;
+        height: 40px;
+        border: 2px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="topbar">Enjoy 70% Discount!</div>
+      <nav>
+        <div class="menu">
+          <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li>About</li>
+            <li>Contact us</li>
+          </ul>
+        </div>
+        <div class="logo">
+          <img
+            src="https://images.unsplash.com/photo-1562307534-a03738d2a81a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80"
+            alt="logo"
+            height="50px"
+          />
+        </div>
+        <div class="loginInfo">
+          <div class="Log in"><button>Login</button></div>
+          <div class="Sign up"><button>Sign up</button></div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="leftContent">
+        <p>Lorem, ipsum dolor.</p>
+        <h1>Create must click landing pages</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab
+          expedita animi doloremque! Cupiditate delectus, minima quidem unde
+          voluptatibus pariatur.
+        </p>
+        <button>Start building</button>
+      </div>
+      <div class="rightContent">
+        <img
+          src="https://images.unsplash.com/photo-1615914143778-1a1a6e50c5dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2068&q=80"
+          alt="Landing page creation"
+          width="900px"
+        />
+      </div>
+    </div>
+    <footer>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+        molestias illum distinctio, quasi voluptatum sequi fuga, ratione autem .
+      </p>
+      <div class="setting"><button>Customize settings</button></div>
+    </footer>
+  </body>
+</html>
