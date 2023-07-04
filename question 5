@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>question 5</title>
+    <style>
+      .imageGallary {
+        position: relative;
+        top: 8rem;
+        left: 20rem;
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .box {
+        height: 200px;
+        background-color: yellow;
+        margin: 10px;
+      }
+      .box1,
+      .box2 {
+        height: 320px;
+        grid-row-start: span 2;
+      }
+      .box5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="imageGallary">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+      </div>
+    </div>
+  </body>
+</html>
