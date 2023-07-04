@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form with Basic Validation</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      #myForm {
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+      }
+      div {
+        display: flex;
+        position: relative;
+        left: 27rem;
+        margin: 1rem;
+      }
+      div input {
+        position: relative;
+        left: 4rem;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form with Basic Validation</h1>
+    <form id="myForm" onsubmit="validateForm(event)">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+        <span id="nameError" class="error"></span>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+        <span id="emailError" class="error"></span>
+      </div>
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" pattern="[0-9]{10}" required />
+        <span id="phoneError" class="error"></span>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required />
+        <span id="passwordError" class="error"></span>
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="18" max="99" required />
+        <span id="ageError" class="error"></span>
+      </div>
+      <div>
+        <label>Gender:</label>
+        <gendeOptions>
+          <input type="radio" id="male" name="gender" required />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" required />
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" required />
+          <label for="other">Other</label>
+        </gendeOptions>
+        <span id="genderError" class="error"></span>
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" id="date" required />
+        <span id="dateError" class="error"></span>
+      </div>
+      <div>
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" required />
+        <span id="colorError" class="error"></span>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+
+        // Clear previous error messages
+        clearErrors();
+
+        // Validate name
+        var nameInput = document.getElementById("name");
+        if (nameInput.value === "") {
+          document.getElementById("nameError").textContent =
+            "Name is required.";
+          nameInput.focus();
+          return false;
+        }
+
+        // Validate email
+        var emailInput = document.getElementById("email");
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailInput.value)) {
+          document.getElementById("emailError").textContent =
+            "Invalid email address.";
+          emailInput.focus();
+          return false;
+        }
+
+        // Validate phone number
+        var phoneInput = document.getElementById("phone");
+        if (phoneInput.value.length !== 10) {
+          document.getElementById("phoneError").textContent =
+            "Phone number should be 10 digits.";
+          phoneInput.focus();
+          return false;
+        }
+
+        // Validate password
+        var passwordInput = document.getElementById("password");
+        if (passwordInput.value.length < 8) {
+          document.getElementById("passwordError").textContent =
+            "Password should be at least 8 characters.";
+          passwordInput.focus();
+          return false;
+        }
+
+        // Validate age
+        var ageInput = document.getElementById("age");
+        if (ageInput.value < 18 || ageInput.value > 99) {
+          document.getElementById("ageError").textContent =
+            "Age should be between 18 and 99.";
+          ageInput.focus();
+          return false;
+        }
+
+        // Validate gender
+        var genderInputs = document.getElementsByName("gender");
+        var checkedGender = false;
+        for (var i = 0; i < genderInputs.length; i++) {
+          if (genderInputs[i].checked) {
+            checkedGender = true;
+            break;
+          }
+        }
+        if (!checkedGender) {
+          document.getElementById("genderError").textContent =
+            "Please select a gender.";
+          return false;
+        }
+
+        // Validate date
+        var dateInput = document.getElementById("date");
+        var currentDate = new Date();
+        var selectedDate = new Date(dateInput.value);
+        if (selectedDate > currentDate) {
+          document.getElementById("dateError").textContent =
+            "Please select a valid date.";
+          dateInput.focus();
+          return false;
+        }
+
+        // Validate color
+        var colorInput = document.getElementById("color");
+        if (colorInput.value === "") {
+          document.getElementById("colorError").textContent =
+            "Please select a color.";
+          colorInput.focus();
+          return false;
+        }
+      }
+
+      function clearErrors() {
+        var errorElements = document.getElementsByClassName("error");
+        for (var i = 0; i < errorElements.length; i++) {
+          errorElements[i].textContent = "";
+        }
+      }
+    </script>
+  </body>
+</html>
