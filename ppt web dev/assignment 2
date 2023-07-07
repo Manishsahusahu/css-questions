@@ -574,3 +574,69 @@ ans. <!DOCTYPE html>
 Q.10 Build Responsive Layout both desktop and mobile and Tablet, see below image for reference ?
 ans. 
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>question 10</title>
+    <style>
+      .row1 {
+        display: flex;
+      }
+      .row1 .box1 {
+        margin: 1rem;
+        width: 40%;
+        height: 20vh;
+        background-color: cornflowerblue;
+      }
+      .row1 .box2 {
+        margin: 1rem;
+        width: 60%;
+        height: 20vh;
+        background-color: gray;
+      }
+      .row2 {
+        margin: 1rem;
+        background-color: rgb(97, 91, 91);
+        height: 40vh;
+      }
+      .row3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .aqua {
+        width: 31%;
+        height: 20vh;
+        margin: 1rem;
+        background-color: aqua;
+      }
+      @media (max-width: 500px) {
+        .aqua {
+          width: 100%;
+        }
+      }
+      .row4{
+        background-color: rgb(179, 167, 167);
+        height: 20vh;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row1">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+      </div>
+      <div class="row2">row2</div>
+      <div class="row3">
+        <div class="box1 aqua">box1</div>
+        <div class="box2 aqua">box2</div>
+        <div class="box3 aqua">box3</div>
+      </div>
+      <div class="row4">row4</div>
+    </div>
+  </body>
+</html>
