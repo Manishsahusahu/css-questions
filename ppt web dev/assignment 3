@@ -1,0 +1,72 @@
+Q.1 What is a Media Query in CSS, and what is its purpose?
+ans. A media query in CSS is a feature that allows you to apply different styles and rules based on certain conditions, such as the characteristics of the user's device or viewport. It provides a way to create responsive web designs that adapt to different screen sizes, resolutions, orientations, and other device capabilities.
+
+The purpose of media queries is to make a web page or application responsive by changing its layout, styling, or behavior to provide an optimal viewing and user experience across various devices and screen sizes. Media queries enable developers to target specific conditions and apply different CSS rules accordingly.
+
+
+
+
+Q.2 How do you define a media query in CSS?
+ans. @media media-type and (media-feature) {
+}
+
+@media is the keyword that denotes the start of a media query.
+media-type specifies the type of media the query applies to, such as screen, print, speech, or all.
+media-feature represents the condition or characteristics of the targeted media, such as width, height, orientation, resolution, and more.
+
+@media screen and (max-width: 600px) {
+
+}
+
+
+Q.3 Explain the concept of Breakpoints in Responsive Web Design and How They are used in Media Queries.
+ans. 
+In responsive web design, breakpoints are specific points or ranges of viewport widths where the layout of a web page or application needs to adapt and change in order to provide an optimal user experience. Breakpoints define the transition points at which different sets of CSS rules or styles are applied through the use of media queries.
+
+The concept of breakpoints is closely tied to media queries, which are CSS features that allow you to apply different styles based on specific conditions, such as viewport size or device characteristics. Media queries are used to define the rules and styles that should be applied when the viewport falls within a particular range or meets specific criteria.
+
+
+
+
+
+
+Q.4 What is the purpose of using Media Queries for Print Media?
+ans. The purpose of using media queries for print media is to provide specific styles and layout optimizations when a web page is printed. Media queries for print allow you to define CSS rules that are specifically targeted for printing purposes, ensuring that the printed version of a webpage or document is visually appealing, legible, and optimized for the printed medium.
+
+Here are some key reasons for using media queries for print media:
+
+Layout and Formatting: Print media queries enable you to adjust the layout and formatting of a webpage for optimal printing. This includes modifying margins, adjusting font sizes, hiding or showing certain elements, and repositioning content to fit better on printed pages.
+
+Paper Size and Orientation: Media queries for print allow you to target different paper sizes and orientations. You can define specific styles and layout adjustments based on the desired paper size, such as A4, letter, or custom sizes. Additionally, you can control the page orientation, whether it's portrait or landscape, to ensure the content is correctly aligned.
+
+Removal of Irrelevant Elements: When printing a webpage, it may be necessary to remove certain elements that are not relevant or desired in the printed version. Media queries for print enable you to selectively hide elements using CSS rules, ensuring that only essential content is included in the printed document.
+
+Text and Image Adjustments: Print media queries allow for modifications to text and image styles to enhance readability and appearance when printed. This may involve adjusting font sizes, line spacing, colors, and optimizing image sizes and resolutions for better print quality.
+
+
+
+
+
+
+
+
+Q.5 What is the purpose of the orientation media feature?
+ans. The orientation media feature is used to target specific styles and layout adjustments based on the orientation of the device or viewport. It allows you to apply different CSS rules depending on whether the device or viewport is in portrait or landscape orientation.
+
+The purpose of the orientation media feature is to provide a way to optimize the presentation of a webpage or application based on how the user is holding or viewing the device. By targeting the orientation, you can adapt the layout, positioning, and styling to better suit the user's viewing context.
+
+Here's how the orientation media feature works:
+
+The orientation media feature can have two possible values: portrait and landscape.
+orientation: portrait is used to target devices or viewports in a vertical orientation, where the height is greater than the width.
+orientation: landscape is used to target devices or viewports in a horizontal orientation, where the width is greater than the height.
+
+
+
+
+
+
+
+
+
+
