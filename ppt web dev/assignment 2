@@ -1,0 +1,576 @@
+Q.1 What’s Box Model in CSS ? 
+ans. The Box Model is a fundamental concept in CSS that describes how elements on a web page are visually represented as rectangular boxes. It defines the structure and layout of elements by dividing them into several layers or components, each with its own properties and dimensions.
+
+The Box Model consists of four main components:
+
+Content: The innermost part of the box, which contains the actual content of the element, such as text, images, or other elements. The size of the content is determined by the width and height properties.
+
+Padding: The space between the content and the border. It provides additional space inside the box and is typically used to add spacing or create visual separation between the content and the border. The padding is controlled by the padding property.
+
+Border: The line that surrounds the padding and content. It defines the boundary of the box and separates it from other elements. The border is controlled by the border property.
+
+Margin: The space between the border of the element and any adjacent elements. It creates spacing and separation between elements. The margin is controlled by the margin property.
+
+
+Q.2 What are the Different Types of Selectors in CSS & what are the advantages of them?
+ans. There are several types of selectors in CSS that allow you to target and style specific elements or groups of elements. Each type of selector has its own advantages and use cases. Here are some of the main types of selectors in CSS:
+
+Element selectors: These are the most basic selectors and target elements based on their HTML tag names. For example, h1, p, div are all element selectors. The advantages of element selectors are their simplicity and ability to target multiple elements of the same type simultaneously.
+
+Class selectors: Class selectors target elements based on the value of their class attribute. You assign a class name to one or more elements and then use the class name preceded by a dot (.) as the selector. For example, .my-class targets elements with the class name "my-class". The advantages of class selectors are their reusability, as multiple elements can share the same class, and their specificity, allowing you to style specific groups of elements.
+
+ID selectors: ID selectors target elements based on the value of their id attribute. You assign a unique ID to an element and then use the ID preceded by a hash (#) as the selector. For example, #my-id targets the element with the ID "my-id". The advantages of ID selectors are their high specificity and ability to uniquely identify a single element.
+
+Attribute selectors: Attribute selectors target elements based on the presence or value of their attributes. You can select elements by attribute name, attribute value, or a combination of both. For example, [type="text"] targets elements with the attribute type set to "text". The advantages of attribute selectors are their flexibility in targeting elements with specific attribute characteristics and their ability to select elements based on various attribute conditions.
+
+Pseudo-class and pseudo-element selectors: Pseudo-classes and pseudo-elements target elements based on their state or position in the document. Pseudo-classes start with a colon (:), such as :hover or :first-child, and target elements based on user interactions or document structure. Pseudo-elements start with a double colon (::), such as ::before or ::after, and target specific parts of an element. The advantages of pseudo-classes and pseudo-elements are their ability to apply styles to specific states or parts of elements without modifying the HTML structure.
+
+
+
+
+
+
+
+
+Q.3 What is VW/VH ?
+ans. vw (Viewport Width): 1vw is equal to 1% of the width of the viewport. For example, if the viewport width is 1000 pixels, 1vw would be 10 pixels. The value of vw adjusts dynamically as the viewport width changes.
+
+vh (Viewport Height): 1vh is equal to 1% of the height of the viewport. For instance, if the viewport height is 800 pixels, 1vh would be 8 pixels. Similar to vw, the value of vh adapts as the viewport height changes.
+
+
+Q.4 Whats difference between Inline, Inline Block and block ?
+ans. inline:
+
+Inline elements do not create line breaks and are rendered on the same line as adjacent content.
+They respect the left and right margins and padding but do not respect the top and bottom margins and padding.
+The width and height properties have no effect on inline elements.
+Examples of inline elements include <span>, <a>, <strong>, <em>, and <img>.
+inline-block:
+
+Inline-block elements are similar to inline elements as they do not create line breaks and are rendered on the same line as adjacent content.
+However, unlike inline elements, they can have a width and height specified, and they respect both the horizontal and vertical margins and padding.
+Inline-block elements also participate in the document flow, allowing other elements to flow around them.
+Examples of inline-block elements include <input>, <button>, and elements with display: inline-block explicitly set.
+block:
+
+Block elements create line breaks and take up the entire width available in the parent container by default.
+They respect both the horizontal and vertical margins and padding.
+Block elements do not sit inline with other elements but instead start on a new line.
+Block elements expand to fill the width of the parent container unless a specific width is set.
+Examples of block elements include <div>, <p>, <h1> to <h6>, <ul>, and <li>.
+
+
+Q.5 How is Border-box different from Content Box?
+ans. border-box and content-box are two values for the CSS box-sizing property, which determines how the total width and height of an element are calculated.
+
+content-box:
+
+The default value of box-sizing is content-box.
+With content-box, the total width and height of an element are calculated by considering only the content area. It does not include padding, border, or margin in the dimensions.
+In other words, if you set a width of 200 pixels on an element with padding and border, the total width of the element will be 200 pixels plus any additional padding and border widths.
+border-box:
+
+When using box-sizing: border-box, the total width and height of an element are calculated by including the content area, padding, and border.
+With border-box, the specified width and height values will include the padding and border widths, ensuring that the element's dimensions remain consistent.
+In this model, if you set a width of 200 pixels on an element with padding and border, the width of the content box will be adjusted to accommodate the padding and border, so the total width of the element will remain at 200 pixels.
+
+
+
+
+
+
+
+
+Q.6 What’s z-index and How does it Function ?
+ans. 
+
+z-index is a CSS property that controls the stacking order of positioned elements (i.e., elements with a position value other than static). It determines which elements appear in front of or behind other elements when they overlap in the stacking context.
+
+The z-index property accepts integer values and determines the "stacking level" of an element. Higher values place the element in front of elements with lower values, and elements with the same z-index value are stacked based on their order in the HTML structure.
+
+
+
+
+Q.7 What’s Grid & Flex and difference between them?
+ans.Flexbox (Flexible Box Layout):
+
+Flexbox is designed for one-dimensional layouts, either in a row or a column.
+It operates along a single axis (either horizontal or vertical) and distributes space among items within a container.
+It is best suited for laying out items within a single row or column, such as navigation menus, item lists, or a row of buttons.
+Flexbox offers features like flexible item sizes, alignment options, and order control.
+CSS Grid Layout:
+
+CSS Grid is a two-dimensional layout system that creates a grid-based layout.
+It allows for complex two-dimensional layouts with rows and columns.
+It is suitable for creating more complex and grid-like structures, such as entire page layouts, card-based designs, and magazine-like arrangements.
+CSS Grid offers features like defining grid tracks (rows and columns), automatic item placement, and control over item positioning and alignment.
+
+
+
+
+Q.8 Difference between absolute and relative and sticky and fixed position explain with example.
+ans. Absolute Positioning:
+
+With position: absolute, an element is positioned relative to its closest positioned ancestor (a parent element with a position value other than static) or to the initial containing block if no positioned ancestor is found.
+Absolute positioning takes the element out of the normal document flow, meaning other elements will not be affected by it.
+The element's position is defined using the top, bottom, left, and right properties, specifying the distance from the edges of its positioned ancestor or the initial containing block.
+Here's an example:
+.absolute-example {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+
+Relative Positioning:
+
+With position: relative, an element is positioned relative to its normal position in the document flow.
+The element's position is defined using the top, bottom, left, and right properties, which move the element from its initial position without affecting the layout of other elements.
+Relative positioning does not take the element out of the document flow, so it can still interact with other elements normally.
+Here's an example:
+.relative-example {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+Sticky Positioning:
+
+With position: sticky, an element behaves like relative positioning until it reaches a specific scroll threshold (defined by the top, bottom, left, or right properties). Once the threshold is reached, it becomes "sticky" and remains fixed in place.
+Sticky elements are positioned according to the normal flow of the document until the user scrolls to a certain point, at which they become fixed.
+Sticky positioning is commonly used for navigation menus or elements that should stay visible while scrolling.
+Here's an example:
+.sticky-example {
+  position: sticky;
+  top: 20px;
+}
+Fixed Positioning:
+
+With position: fixed, an element is positioned relative to the viewport (the browser window or the device screen) and remains fixed in place even when the page is scrolled.
+Fixed elements are removed from the normal document flow and do not affect the layout of other elements.
+The element's position is defined using the top, bottom, left, and right properties, specifying the distance from the edges of the viewport.
+Fixed positioning is commonly used for elements like headers, footers, or overlays that need to stay in a fixed position on the screen.
+Here's an example:
+.fixed-example {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+
+
+
+
+
+Q.9 Build Periodic Table as shown in the below image.
+
+ans. <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>index</title>
+
+    <style type="text/css">
+        .parent {
+            height: 500px;
+            width: 90%;
+            margin: auto;
+            justify-content: space-evenly;
+            display: flex;
+            padding: 0px;
+        }
+        
+        .child-1{
+            height: 100%;
+            width: 16%;
+            display: flex;
+            padding: 0px;
+            justify-content: space-evenly;
+        }
+
+        .child-2{
+            height: 100%;
+            width: 51%;
+            margin: 0px;
+        }
+
+        .child-3{
+            height: 100%;
+            width: 33%;
+            display: flex;
+            padding: 0px;
+            margin: 0px;
+            justify-content: space-evenly;
+            margin-left: -70px;
+        }
+
+        .sub-child-1{
+            margin: 0px;
+            height: 100%;
+            width: 50px;
+        }
+
+        .block-1{
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            margin-bottom: 15px;
+        }
+
+        .block-1-2{
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            margin-bottom: 15px;
+        }
+
+        .sub-child-2-1{
+            height: 35%;
+            width: 100%;
+        }
+
+        .sub-child-2-2{
+            height: 61%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: -30px;
+        }
+
+        .block-2{
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            margin-top: 30px;
+            margin-left: -10px;
+            text-align: left;
+        }
+
+        #id2  {
+         text-align: center;
+         margin-top: 30px;  
+        }
+
+        #white {
+            border: 0px white;
+            align-content: flex-end;
+            height: 50px;
+            margin-bottom: 18px;
+            width: auto;
+        }
+
+        #mar{
+            margin-top: 2px;
+            background-color: #0000fe;
+        }
+
+        #red{
+            background-color: #ac0003;
+            color: white;
+        }
+
+        #green{
+            background-color: #89a02c;
+        }
+        #ali{
+            text-align: center;
+            padding: 0px;
+            margin-top: 8px;
+        }
+
+        #pink{
+            background-color: #ff5555;
+        }
+
+        #cream{
+            background-color: #ffe6d5;
+            border: 5px solid black;
+            margin-bottom: 10px;
+            margin-left: -2px;
+        }
+
+        #text-1{
+            text-align: right;
+            margin-right: 5px;
+        }
+
+        #text-2{
+            font-size: 25px;
+            margin-left: 10px;
+            margin-top: -10px;
+        }
+
+        #text-3{
+            text-align: left;
+            margin-top: -25px;
+            margin-left: 5px;
+        }
+
+        #orange{
+            background-color: #ff6600;
+        }
+
+        #purple{
+            background-color: #aa0087;
+        }
+
+        #dark-green{
+            background-color:  #5aa09d;
+        }
+
+        #dark-pink{
+            background-color: #ff0066;
+        }
+
+        #yellow{
+            background-color: #ffcc00;
+        }
+        
+        #gray{
+            background-color: #6d535e;
+        }
+
+        .parent-2{
+            height: 100px;
+            width: 50%;
+            text-align: center;
+            margin: auto;
+            justify-content: space-evenly;
+        }
+
+        .child-4{
+            height: 50%;
+            width: 100%;
+            display: flex;
+            text-align: center;
+        }
+
+        .sub-child-4{
+            width: 7%;
+            font-size: 25px;
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        #color-1{
+            background-color: #47582e;
+            color: white;
+        }
+
+        #color-2{
+            background-color: #95bc5f;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="id2">The Periodic Table of Elements</h1>
+    <div class="parent">
+       <div class="child-1">
+        <div class="sub-child-1">
+            <div class="block-1" id="red"><h1 id="ali">H</h1></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="green"></div>
+        </div>
+        <div class="sub-child-1">
+            <div id="white"></div>
+            <div class="block-1" id="pink"> <h2 id="ali">4</h2> </div>
+            <div class="block-1" id="pink"> <h2 id="ali">12</h2> </div>
+            <div class="block-1" id="pink"> <h2 id="ali">20</h2> </div>
+            <div class="block-1" id="pink"> <h2 id="ali">38</h2> </div>
+            <div class="block-1" id="pink"> <h2 id="ali">56</h2> </div>
+            <div class="block-1" id="pink"> <h2 id="ali">88</h2> </div>
+        </div>
+        <div class="sub-child-1">
+            <div id="white"></div>
+            <div id="white"></div>
+            <div id="white"></div>
+            <div id="white"></div>
+            <div id="white"></div>
+            <div class="block-1" id="cream"></div>
+            <div class="block-1" id="cream"></div>
+        </div>
+       </div>
+
+
+       <div class="child-2">
+        <div class="sub-child-2-1">
+            <div class="block-2" id="green">
+                <div id="text-1"><p id="text-1"><b>14</b></p></div>
+                <div id="text-2"><h1>Si</h1></div>
+                <div id="text-1"><p id="text-3"><b>silicon</b></p></div>
+            </div>
+        </div>
+
+        <div class="sub-child-2-2">
+            <div class="sub-child-1">
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar" ></div>
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar"></div>
+            </div>
+
+            <div class="sub-child-1">
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar" ></div>
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar"></div>
+            </div>
+
+            <div class="sub-child-1">
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar" ></div>
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar"></div>
+            </div>
+
+            <div class="sub-child-1">
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar" ></div>
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar"></div>
+            </div>
+
+            <div class="sub-child-1">
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar" ></div>
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar"></div>
+            </div>
+
+            <div class="sub-child-1">
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar" ></div>
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar"></div>
+            </div>
+
+            <div class="sub-child-1">
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar" ></div>
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar"></div>
+            </div>
+
+            <div class="sub-child-1">
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar" ></div>
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar"></div>
+            </div>
+
+            <div class="sub-child-1">
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar" ></div>
+                <div class="block-1-2" id="mar"></div>
+                <div class="block-1-2" id="mar"></div>
+            </div>
+
+        </div>
+       </div>
+
+
+       <div class="child-3">
+        <div class="sub-child-1">
+            <div id="white"></div>
+            <div class="block-1" id="purple"></div>
+            <div class="block-1" id="orange"></div>
+            <div class="block-1" id="orange"></div>
+            <div class="block-1" id="orange"></div>
+            <div class="block-1" id="orange"></div>
+            <div class="block-1" id="gray"></div>
+        </div>
+        <div class="sub-child-1">
+            <div id="white"></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="purple"></div>
+            <div class="block-1" id="purple"></div>
+            <div class="block-1" id="orange"></div>
+            <div class="block-1" id="orange"></div>
+            <div class="block-1" id="gray"></div>
+        </div>
+        <div class="sub-child-1">
+            <div id="white"></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="purple"></div>
+            <div class="block-1" id="purple"></div>
+            <div class="block-1" id="orange"></div>
+            <div class="block-1" id="gray"></div>
+        </div>
+        <div class="sub-child-1">
+            <div id="white"></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="green"></div>
+            <div class="block-1" id="purple"></div>
+            <div class="block-1" id="purple"></div>
+            <div class="block-1" id="gray"></div>
+        </div>
+        <div class="sub-child-1">
+            <div id="white"></div>
+            <div class="block-1" id="dark-pink"></div>
+            <div class="block-1" id="dark-pink"></div>
+            <div class="block-1" id="dark-pink"></div>
+            <div class="block-1" id="dark-pink"></div>
+            <div class="block-1" id="dark-pink"></div>
+            <div class="block-1" id="gray"></div>
+        </div>
+        <div class="sub-child-1">
+            <div class="block-1" id="yellow"></div>
+            <div class="block-1" id="yellow" ></div>
+            <div class="block-1" id="yellow"></div>
+            <div class="block-1" id="yellow"></div>
+            <div class="block-1" id="yellow"></div>
+            <div class="block-1" id="yellow"></div>
+            <div class="block-1" id="gray"></div>
+        </div>
+       </div>
+    </div>
+
+    <br><br>
+
+    <div class="parent-2">
+        <div class="child-4">
+            <div class="sub-child-4" id="color-1"><p ><b>La</b></p></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+            <div class="sub-child-4" id="color-1"></div>
+        </div>
+        <div class="child-4">
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"><p><b>Am</b></p></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"></div>
+            <div class="sub-child-4" id="color-2"><p><b>No</b></p></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+Q.10 Build Responsive Layout both desktop and mobile and Tablet, see below image for reference ?
+ans. 
+
